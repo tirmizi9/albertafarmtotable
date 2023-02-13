@@ -1,0 +1,369 @@
+		
+			/*basic reset*/
+			* {margin: 0; padding: 0;}
+
+			html {
+				height: 100%;
+				/*Image only BG fallback*/
+				
+				/*background = gradient + image pattern combo
+				background: 
+					linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/ 
+			}
+
+			.order_page_container{
+				position: relative;
+			}
+			.loader{
+				display:none;				
+			}
+			.gifloading{
+				display:block;	
+				position:absolute;
+				width:100%;
+				Height:100%;
+				top:0;
+				left:0;
+				text-align:center;
+				background: rgba(255,255,255,0.8); 
+			}
+			.gifloading img{
+				margin: 20% auto;
+			}
+			.added{ 
+				display:none;	
+			} 
+.mjt_inner button{
+	
+    color: #333;
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 14px !important;
+    padding: 0 !important;
+ 
+}
+			p{float: left;
+			  text-align: left;
+			  width:100%;
+			  }
+			  
+			ul {
+			  list-style: none;
+			  float: left;
+			  text-align: left;
+			  width:100%;
+			}
+			ul li{
+			  list-style: none;
+			  float: left;
+			   text-align: left;
+			    width:100%;
+			}
+			/*form styles*/
+			#msform {
+				width: 100%;
+				margin: 0px auto 30px;
+				text-align: center;
+				position: relative;
+				float: left;
+			}
+			#msform fieldset {
+				background: white;
+				border: 0 none;
+				border-radius: 3px;
+				box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+				padding: 40px 30px 20px;
+				box-sizing: border-box;
+				width: 100%;
+				margin: 0 auto;
+				
+				/*stacking fieldsets above each other*/
+				position: relative;
+			}
+			/*Hide all except first fieldset*/
+			#msform fieldset:not(:first-of-type) {
+				display: none;
+			}
+			/*inputs*/
+			#msform input, #msform textarea {
+				padding: 15px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+				margin-bottom: 10px;
+				width: 100%;
+				box-sizing: border-box;
+				font-family: montserrat;
+				color: #2C3E50;
+				font-size: 13px;
+			}
+			/*buttons*/
+.row_button{ float:left ; margin: 40px 5px 10px; } 
+			#msform .action-button {
+				width: initial;
+				background: #0D3692;
+				font-weight: bold;
+				font-size: 16px;
+				color: white;
+				border: 0 none;
+				border-radius: 1px;
+				cursor: pointer;
+				padding: 8px 16px ;
+				margin: 0px 10px;
+			}
+			#msform .action-button:hover, #msform .action-button:focus {
+				box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+			}
+			/*headings*/
+			.fs-title {
+				font-size: 20px;
+				text-transform: uppercase;
+				color: #000;
+				margin-bottom: 10px;
+				font-weight: bold;
+			}
+			.step-subtitle {margin-bottom:20px !important;  }
+			.fs-subtitle {
+				font-weight: normal;
+				font-size: 13px;
+				color: #000;				
+				max-width: 560px;
+				float: none;
+				margin: 10px auto 0px;
+				text-align: center;
+			}
+			.m-subtitle{
+				text-align: center !important;
+			}
+			/*progressbar*/
+			#progressbar {
+				margin-bottom: 30px;
+				overflow: hidden;
+				/*CSS counters to number the steps*/
+				counter-reset: step;
+			}
+			#progressbar li {
+				list-style-type: none;
+				color: white;
+				text-transform: uppercase;
+				font-size: 10px;
+				width: 25%;
+				float: left;
+				position: relative;
+			}
+			#progressbar li:before {
+				content: counter(step);
+				counter-increment: step;
+				width: 20px;
+				line-height: 20px;
+				display: block;
+				font-size: 10px;
+				color: #333;
+				background: #efefef;
+				border-radius: 3px;
+				margin: 0 auto 5px auto;
+				text-align: center;
+			}
+			/*progressbar connectors*/
+			#progressbar li:after {
+				content: '';
+				width: 100%;
+				height: 2px;
+				background: #9e9e9e;
+				position: absolute;
+				left: -50%;
+				top: 9px;
+				z-index: -1; /*put it behind the numbers*/
+			}
+			#progressbar li:first-child:after {
+				/*connector not needed before the first step*/
+				content: none; 
+			}
+			/*marking active/completed steps green*/
+			/*The number of the step and the connector before it = green*/
+			#progressbar li.active:before,  #progressbar li.active:after{
+				background: #27AE60;
+				color: white;
+			}
+			.box{}
+			.selected {
+			  border :2px solid #cd0000 !important;			  
+			}
+			.mjt_cols{
+				background: white;
+				border: 1px solid rgb(217, 217, 217);
+				border-radius: 8px;
+				cursor: pointer;
+				float: left;
+			}
+			.cols_type_of_meat .mjt_cols{
+				float: unset !important;
+			}
+			.mjt_inner{ 
+				padding: 0 15px; 
+			}
+			.mjt_cols h3{				
+				font-size: 20px;
+				font-weight: 700;
+				line-height: 2rem;
+				color: rgb(34, 34, 34);
+				text-align: left;
+			}
+			
+			.mjt_cols p{
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 1.4rem;
+				cursor: inherit;
+				float: left;
+				padding-bottom: 0.25rem;
+				text-align: left;
+			}
+			.col-6-hidden{display:none }
+			.rad-label {
+				  display: inline-block;
+				  align-items: center;
+				  border-radius: 100px;	 
+				  float: right;
+				  cursor: pointer;
+				  transition: .3s;
+				}
+
+				.rad-label:hover,
+				.rad-label:focus-within {
+				  background: hsla(0, 0%, 80%, .14);
+				}
+
+				.rad-input {
+				  position: absolute;
+				  left: 0;
+				  top: 0;
+				  width: 1px;
+				  height: 1px;
+				  opacity: 0;
+				  z-index: -1;
+				}
+
+				.rad-design {
+				  width: 22px;
+				  height: 22px;
+				  border-radius: 100px;
+
+				  background: #4caf50;
+				  /* 
+				  background: radial-gradient(hsl(4deg 100% 48%), hsl(225, 97%, 62%));
+				  linear-gradient(to right bottom, hsl(154, 97%, 62%), hsl(225, 97%, 62%)); */
+				  position: relative;
+				}
+
+				.rad-design::before {
+				  content: '';
+
+				  display: inline-block;
+				  width: inherit;
+				  height: inherit;
+				  border-radius: inherit;
+
+				  background: hsl(0, 0%, 90%);
+				  transform: scale(1.2);
+				  transition: .3s;
+				}
+
+				.rad-input:checked+.rad-design::before {
+				  transform: scale(0);
+				}
+
+				.rad-text {
+				  color: hsl(0, 0%, 60%);
+				  margin-left: 14px;
+				  letter-spacing: 3px;
+				  text-transform: uppercase;
+				  font-size: 18px;
+				  font-weight: 900;
+
+				  transition: .3s;
+				}
+
+				.rad-input:checked~.rad-text {
+				  color: hsl(0, 0%, 40%);
+				}
+				.prize{
+					font-size: 18px !important;
+					font-weight: 600 !important;
+					line-height: 2rem;
+					color: #0D3692; 
+				}
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #f8f8f8;
+  color: #cd0000;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  border-radius: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin: 15px 0 0;
+}
+
+button.collapsible:after {
+    content: '\002B';
+    color: #cd0000;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.cactive, .collapsible:hover {
+  background-color: #f4f4f4;
+}
+button.accordion.cactive:after {
+    content: "\2212";
+}
+/* Style the collapsible content. Note: hidden by default */
+.collaps_content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.collaps_content ul {
+  list-style: none;
+  float: left;
+   text-align: left;
+}
+.collaps_content ul li{ 
+	padding: 4px 0px;
+}
+.collaps_content ul li:before {
+  content: '✓'; 
+  color: #cd0000;
+  margin-right: 4px;
+    font-weight: 600;
+} 
+.woocommerce-no-products-found{
+	text-align: center;
+    width:  100% !important ; 
+}
+.woo_products_resul ul.products li.product{ width: 30.05% ; }
+.woo_products_result ul.products li.product:nth-child(3n){ margin-right: 0;  }
+@media only screen and (max-width: 767px){
+.container{
+	width:100% !important;
+}
+.mjt_cols{
+ margin: 10px auto;
+}
+#msform fieldset{
+	padding: 40px 5px 20px;
+} 
+.row_button{ float:left ; margin: 40px 5px 10px; }
+	#msform .action-button{ margin: 5px 10px; }
+.mjt_cols p {    
+    line-height: 1.4rem;
+}
+}
