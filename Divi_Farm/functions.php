@@ -123,32 +123,14 @@ function mjt_custom_order_product_load()
 				
 			),			
 		);
-		/*array(
-					 'relation' => 'OR',),*/
-		/* // Category Parameter					
-		$args['tax_query'] = array(	array( 
-							'taxonomy' 	=> 'product_cat',
-							'field' 	=> 'name',
-							'terms' 	=> $cat
-						));	 */	 
+		
 		// query database
 		$products = new WP_Query( $args );
 		 echo '<!--- ';
 		print_r($args); echo ' ---> ';
 	  echo '<!--- ' . $products->found_posts . '<br/>--> '; 
 		if ( $products->have_posts() ) : 
-	    /* wc_setup_loop(
-         array(
-            'name' => 'single_variations',
-            'is_shortcode' => true,
-            'is_search' => false,
-            'is_paginated' => true,
-            'total' => $query->found_posts,
-            'total_pages' => $query->max_num_pages,
-            'per_page' => $query->get( 'posts_per_page' ),
-            'current_page' => max( 1, $query->get( 'paged', 1 ) ),
-         )
-      ); */
+	   
 			woocommerce_product_loop_start(); 
 				while ( $products->have_posts() ) : $products->the_post();
 					woocommerce_get_template_part( 'customorder', 'product' );
@@ -207,9 +189,7 @@ function mjt_woocommerce_ajax_add_to_cart() {
 	 $_SESSION['meat_type'] = $_POST['meattype'] ;
     if ($passed_validation && WC()->cart->add_to_cart($product_id, $quantity, $variation_id) && 'publish' === $product_status) { 
         do_action('woocommerce_ajax_added_to_cart', $product_id);
-            /* if ('yes' === get_option('ql_woocommerce_cart_redirect_after_add')) { 
-                wc_add_to_cart_message(array($product_id => $quantity), true); 
-            }  */
+           
             WC_AJAX :: get_refreshed_fragments(); 
 		
             } else { 
@@ -230,41 +210,6 @@ function mjt_register_my_session()
 }
 // add_action('init', 'mjt_register_my_session');
 
-function mjt_cart_page_checking_meattype(){
-	if(is_cart()){
-		$crttypepdid = '' ;
-		foreach( WC()->cart->get_cart() as $cart_item ){
-			$productid = $cart_item['product_id'];
-			$productids = array(253770, 253769, 253768, 253767);
-			  if (in_array($productid, $productids))
-			  {
-				$crttypepdid = $productid;
-			  }
-		}
-		if(isset($crttypepdid)){
-			$meat_type = 'Beef' ;
-			$imgurs = array();
-			$imgurs['Beef'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/b2.jpg';
-			$imgurs['Pork'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/p2.jpg';
-			$imgurs['Goat'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/g2.jpg';
-			$imgurs['Mutton'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/m1.jpg';
-			$imgurs['Bison'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/Bison.jpg';
-			$imgurs['Venison'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/Venison.jpg';
-			$imgurs['Yak'] = 'https://demo.tirmizi.net/45/wp-content/themes/Divi_Farm/img/yak.jpg';
-		$imgurl = "<img width='400' height='400'  src='".$imgurs[$meat_type]."' class='woocommerce-placeholder wp-post-image' alt='Placeholder' decoding='async' loading='lazy' sizes='(max-width: 400px) 100vw, 400px'>";
-			 echo '<script type="text/javascript" id="cart_images_script">
-				/* alert("hi  ' .$crttypepdid. ', '.$imgurs[$meat_type].'" );
-				jQuery("a.' .$crttypepdid. ' img" ).attr("src", "'.$imgurs[$meat_type].'"); */
-			jQuery(document).ready(function() {
-				/* jQuery("a.' .$crttypepdid. '" ).html("").html($imgurl); */ 
-			});
-			</script>'; 
-		}else{
-			 echo '<script type="text/javascript">alert("hi" ' .$_SESSION['meat_type']. ');</script>';
-		}
-	}	
-}
-// add_action('wp_footer', 'mjt_cart_page_checking_meattype', 10); 
 /**
  * Remove Product Link at page "Place an Order"
  */

@@ -28,11 +28,7 @@
 </div>			
 			<div class="col-12 col-sm-12 col-md-12 row_button">
 				<input type="button" name="previous" class="previous action-button" value="Previous" data-step="four"/>
-				<input type="button" name="cart" class="submit_order action-button" value="Cart" data-step="four"/>
-			    <!--- 
-				<input type="submit" name="submit" class="submit action-button" value="Cart" data-step="four"/>
-				<a class="action-button select_addons" title="Cart" href="https://demo.tirmizi.net/45/cart/"/ style="padding: 12px 24px;">Cart </a>
-				-->
+				<input type="button" name="cart" class="submit_order action-button" value="Cart" data-step="four"/>		    
 				
 			</div>
 			

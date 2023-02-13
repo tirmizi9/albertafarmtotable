@@ -122,7 +122,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 		  </fieldset>
 		  <input type="hidden" name="hidden_type_of_meat" class="rdo_type_of_meat" value="Beef">
 		   <input type="hidden" name="hidden_choosen_plan" class="rdo_choosen_plan" value="Big Box" data-val="big_box_plan"/>
-		  <input type="hidden" name="hidden_choosen_box" class="rdo_choosen_box" value="1/2 Size" data-val="253768"/>	  
+		  <input type="hidden" name="hidden_choosen_box" class="rdo_choosen_box" value="1/2 Size" data-val="pid"/>	  
 		  
 		</form>   
 	
@@ -142,7 +142,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
         </div>
         <div class="modal-body">
           
-		  <?php echo do_shortcode('[contact-form-7 id="253816" title="Contact form 1"]');?>
+		  <?php echo do_shortcode('[contact-form-7 id="fid" title="Contact form"]');?>
         </div>
         <div class="modal-footer">
         <!--  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> -->
@@ -153,11 +153,9 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
   </div>			
 </div>
 
-	<?php wp_footer(); ?>
-	<!--  <script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/bootstrap.min.js"></script>
-	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/jquery.min.js"></script>-->
+	<?php wp_footer(); ?>	
 	<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/jquery.easing.min.js"></script>
-			<!--<a href="https://bbbootstrap.com/snippets/multi-step-form-wizard-animated-progressbar-53000683" target="_blank">More</a>  https://demo.tirmizi.net/45/place-an-order/?meat_type=beef-->
+			
 		<script type="text/javascript">
 		<?if(isset($_GET['meat_type'])){
 			$meat_type= $_GET['meat_type'] ;
@@ -221,19 +219,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					}
 					func_total_price_convert_installment(plannum) ;
 				}
-				/* if('choosen_plan'==dtstep){
-					jQuery(".col-6-hidden").hide();
-					jQuery("."+dtstepval).show();
-					if(dtstepval=='current_plan'){
-						jQuery(".crnt_big_box").prop('checked',true); 
-						jQuery(".n_rdo_choosen_box").val('crnt_big_box');
-						jQuery(".rdo_choosen_box").val('Big Box');
-					}else{
-						jQuery(".cstm_classic_box").prop('checked',true); 
-						jQuery(".n_rdo_choosen_box").val('cstm_classic_box'); 
-						jQuery(".rdo_choosen_box").val('Classic Box');
-					}
-				} */
+				
 			});
 
 			jQuery(".previous").click(function(){
@@ -270,10 +256,7 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					//this comes from the custom easing plugin
 					easing: 'easeInOutBack'
 				});
-				/* if( dtstep=='type_of_meat'){					
-					var step2_active_box = jQuery('.rdo_choosen_box').attr('data-val');
-					//jQuery("."+step2_active_box).show();
-				}	*/			
+							
 			});
 			jQuery(function(){
 				jQuery('input[type=radio]').change(function() {  
@@ -284,17 +267,10 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					jQuery("."+dtclss).val(dtval);
 					jQuery("."+dtclss).attr('data-val', dtvall);
 					
-					/* if('rdo_choosen_plan'==dtclss){
-						jQuery('.selected').removeClass('selected').addClass('box');
-						jQuery(this).closest('div.mjt_cols').removeClass('box').addClass('selected');
-					}
-					if('rdo_choosen_box'==dtclss){ 
 					
-					} */
 				});
 			}); 
-			/*checkbox https://errorsea.com/how-to-get-multiple-checkbox-value-in-jquery-using-array/ 			https://stackoverflow.com/questions/11945802/how-to-get-multiple-checkbox-values-using-jquery
-			*/
+			
 			/*collapsible */
 			var coll = document.getElementsByClassName("collapsible");
 			var i;
@@ -343,10 +319,9 @@ $is_page_builder_used = et_pb_is_pagebuilder_used( get_the_ID() );
 					var cb = jQuery(this).attr('data-bcost');
 					var inst = cb / plannum ;
 					 jQuery(this).html('').html(inst);
-					/* jQuery(this).html('').html(inst + ' upto '+ plannum + ' month')
-					strng = strng + inst +', ';  */
+					
 				});
-				 /*alert('Test step 3=> '+ strng + ', ' +plannum); */
+				 
 			} 
 			
 			jQuery(document).ready(function(){

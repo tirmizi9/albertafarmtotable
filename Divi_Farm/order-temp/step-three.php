@@ -6,10 +6,10 @@
 			   <div class="mjt_inner">
 				<h3 class="fs-subtitle">1/4 Cut
 				 <label class="rad-label">
-					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="1/4 Size" data-val="253767">
+					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="1/4 Size" data-val="pid">
 					<div class="rad-design"></div>					
 				  </label></h3> 
-					<p class="prize"> $<span class="b_cost" data-bcost="1740">1740</span> Per Month</p>
+					<p class="prize"> $<span class="b_cost" data-bcost="pcost">pcost</span> Per Month</p>
 					<p>Good for individuals and small families</p>
 					<p>Feeds 2 people for up to a year. Prices starting at 145$/month </p>	
 					<p>About 115 Lbs of local grass-fed, dry aged beef shipped to your door </p>						
@@ -33,10 +33,10 @@
 			   <div class="mjt_inner">
 				<h3 class="fs-subtitle">1/2 Cut 
 				 <label class="rad-label">
-					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="1/2 Size" data-val="253768" checked>
+					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="1/2 Size" data-val="pid" checked>
 					<div class="rad-design"></div>					
 				  </label></h3> 
-					<p class="prize">$<span class="b_cost" data-bcost="3240">3240</span> Per Month</p>
+					<p class="prize">$<span class="b_cost" data-bcost="pcost">pcost</span> Per Month</p>
 					<p>Good for small families, and protein-heavy individuals</p>
 					<p>Feeds 4 people for up to a year. Prices starting at 270$/month</p>	
 					<p>About 230 Lbs of local grass-fed, dry aged beef shipped to your door</p>						
@@ -63,10 +63,10 @@
 			   <div class="mjt_inner">
 				<h3 class="fs-subtitle">3/4 Cut
 				 <label class="rad-label">
-					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="3/4 Size" data-val="253769">
+					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="3/4 Size" data-val="pid">
 					<div class="rad-design"></div>					
 				  </label></h3> 
-					<p class="prize">$<span class="b_cost" data-bcost="4800">4800</span> Per Month</p>
+					<p class="prize">$<span class="b_cost" data-bcost="pcost">pcost</span> Per Month</p>
 					<p>Good for medium-sized families and protein-heavy small families. </p>
 					<p>Feeds 6 people for up to a year. Prices starting at 400$/month (deposit required)</p>
 					<p>About 340 Lbs of local grass-fed, dry aged beef shipped to your door
@@ -92,10 +92,10 @@
 			   <div class="mjt_inner">
 				<h3 class="fs-subtitle">Whole animal 
 				 <label class="rad-label">
-					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="Whole animal" data-val="253770">
+					<input type="radio" class="rad-input" name="rdo_choosen_box" data-name="rdo_choosen_box" value="Whole animal" data-val="pid">
 					<div class="rad-design"></div>					
 				  </label></h3> 
-					<p class="prize"> $<span class="b_cost"  data-bcost="6240">6240</span> Per Month</p>
+					<p class="prize"> $<span class="b_cost"  data-bcost="pcost">pcost</span> Per Month</p>
 					<p>Good for large-sized families, frequent entertainers, and apex predators.</p>
 					 <p>Feeds 8 people for up to a year.</p>
 					 <p>Prices starting at $520/month (deposit required) </p>

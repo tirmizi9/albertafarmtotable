@@ -5,7 +5,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/b2.jpg" width="120">
 					<label class="rad-label">
-					<?php $enable__disable1 =  get_field('enable__disable', 'product_cat_23'); 
+					<?php $enable__disable1 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable1 != 'enabled'){ 
 						$enable_disable1='disabled';
 						$avl1 = 'Not Available now';
@@ -24,7 +24,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/p2.jpg" width="120">
 					<label class="rad-label">
-					<?php $enable__disable2 =  get_field('enable__disable', 'product_cat_22'); 
+					<?php $enable__disable2 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable2 != 'enabled'){ 
 						$enable_disable2='Disabled';
 						$avl2 = 'Call Us for more information';
@@ -43,7 +43,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/g2.jpg" width="120"> 
 					<label class="rad-label">
-					<?php $enable__disable3 =  get_field('enable__disable', 'product_cat_24'); 
+					<?php $enable__disable3 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable3 != 'enabled'){ 
 						$enable_disable3='Disabled';
 						$avl3 = 'Call Us for more information';
@@ -62,7 +62,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/m1.jpg" width="120"> 
 					<label class="rad-label">
-					<?php $enable__disable4 =  get_field('enable__disable', 'product_cat_25'); 
+					<?php $enable__disable4 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable4 != 'enabled'){ 
 						$enable_disable4='Disabled';
 						$avl4 = 'Call Us for more information';
@@ -81,7 +81,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/Bison.jpg" width="120"> 
 					<label class="rad-label">
-					<?php $enable__disable5 =  get_field('enable__disable', 'product_cat_42'); 
+					<?php $enable__disable5 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable5 != 'enabled'){ 
 						$enable_disable5='Disabled';
 						$avl5 = 'Call Us for more information';
@@ -100,7 +100,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/Venison.jpg" width="120"> 
 					<label class="rad-label">
-					<?php $enable__disable6 =  get_field('enable__disable', 'product_cat_43'); 
+					<?php $enable__disable6 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable6 != 'enabled'){ 
 						$enable_disable6='Disabled';
 						$avl6 = 'Call Us for more information';
@@ -119,7 +119,7 @@
 				   <div class="mjt_inner">
 					<h3 class="fs-subtitle m-subtitle"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/yak.jpg" width="120"> 
 					<label class="rad-label">
-					<?php $enable__disable7 =  get_field('enable__disable', 'product_cat_44'); 
+					<?php $enable__disable7 =  get_field('enable__disable', 'product_cat_id'); 
 					if($enable__disable7 != 'enabled'){ 
 						$enable_disable7='Disabled';
 						$avl7 = 'Call Us for more information';
@@ -137,4 +137,4 @@
 				<input type="hidden" name="hide_type_of_meat" class="n_rdo_type_of_meat" value="Beef">	
 				<input type="button" name="next" class="next action-button" value="Next, Choose your Plan" data-step="choosen_plan"//>
 			</div> 
-			<!---https://errorsea.com/how-to-get-multiple-checkbox-value-in-jquery-using-array/--->
+			
